@@ -193,12 +193,16 @@ body {
   background: #FFFFFF;
   border-radius: 3px;
   color: #000000;
-  padding: 43px 50px;
+  padding: 3% 4%;
+}
+
+.short-info {
+  margin-right: 3%;
 }
 
 .poster {
   display: block;
-  margin-top: -80px;
+  margin-top: -40%;
   margin-bottom: 20px;
 }
 
@@ -243,7 +247,8 @@ body {
 .tabs {
   display: flex;
   align-items: center;
-  margin-bottom: 40px;
+  margin-bottom: 4%;
+  justify-content: space-between;
 }
 
 .tabs-item {
@@ -254,7 +259,7 @@ body {
 }
 
 .tabs-item:not(:last-child) {
-  margin-right: 40px;
+  margin-right: 4%;
 }
 
 .tabs-item-active {
@@ -265,7 +270,7 @@ body {
   font-size: 16px;
   line-height: 140%;
   margin-top: 0;
-  
+
 }
 
 .text-title {
@@ -274,6 +279,7 @@ body {
   line-height: 140%;
   margin: 32px 0px 22px;
 }
+
 .subscribe-title {
   font-weight: 900;
   font-size: 16px;
@@ -287,15 +293,15 @@ body {
 }
 
 .subscribe-input {
-    background: rgba(196, 196, 196, 0.5);
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    border: none;
-    padding: 12px 18px;
-    color: #AEAEAE;
-    flex: 1;
-    font-size: 14px;
-    line-height: 16px;
+  background: rgba(196, 196, 196, 0.5);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border: none;
+  padding: 12px 18px;
+  color: #AEAEAE;
+  flex: 1;
+  font-size: 14px;
+  line-height: 16px;
 }
 
 .subscribe-button {
@@ -303,4 +309,164 @@ body {
   border-radius: 0px 5px 5px 0px;
   border: none;
   padding: 12px;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 960px;
+  }
+
+  .tabs-item {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 740px;
+  }
+
+  .actors-list {
+    font-size: 12px;
+  }
+
+  .tabs-item {
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  .tabs-item:not(:last-child) {
+    margin-right: 3%;
+  }
+
+  .full-content {
+    flex-wrap: wrap;
+  }
+
+  .tabs-content {
+    margin-bottom: 5%;
+  }
+
+  .text {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 540px;
+  }
+
+  .more {
+    display: none;
+  }
+
+  .tabs {
+    flex-wrap: wrap;
+    justify-content: start;
+
+  }
+
+  .tabs-content {
+    margin-right: 0;
+  }
+
+  .tabs-item {
+    flex-basis: 30%;
+    line-height: 2;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .tabs-item:not(:last-child) {
+    margin-right: 18%;
+  }
+}
+
+@media (max-width: 578px) {
+  .container {
+    width: 90%;
+  }
+
+  .header {
+    flex-wrap: wrap;
+  }
+
+  .search {
+    flex-basis: 100%;
+    order: 3;
+    margin-top: 5%;
+  }
+
+  .content {
+    flex-wrap: wrap;
+  }
+
+  .short-info {
+    margin-bottom: 5%;
+  }
+
+  .poster {
+    margin-top: -27%;
+  }
+
+  .actors-list,
+  .actors-title {
+    display: none;
+  }
+
+  .movie-info {
+    flex-wrap: wrap;
+  }
+
+  .play {
+    flex-basis: 100%;
+    margin-top: 10%;
+  }
+
+  .short-info {
+    margin-right: 0;
+  }
+
+  .poster {
+    display: inline-block;
+    width: 100%;
+    margin-top: -20%;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .tabs-item {
+    font-weight: normal;
+    flex-basis: 60%;
+    font-size: 18px;
+    line-height: 21px;
+    margin-bottom: 10px;
+    margin-right: 0;
+
+  }
+
+  .bookmark-added {
+    display: none;
+  }
+
+  .text {
+    font-size: 16px;
+    line-height: 140%;
+  }
+
+  .subscribe {
+    width: 100%;
+  }
+
+  .subscribe-title {
+    text-align: center;
+  }
+
+  .banner {
+    width: 100%;
+  }
+
 }
