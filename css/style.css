@@ -224,6 +224,7 @@ body {
   padding-left: 15px;
   text-decoration: underline;
   margin: 0;
+  line-height: 150%;
 }
 
 .full-info {
@@ -239,15 +240,21 @@ body {
   margin-right: 70px;
 }
 
+.tabs {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
 .tabs-item {
   color: #000000;
   text-decoration: none;
-  margin-right: 40px;
   font-size: 18px;
   line-height: 21px;
 }
-.bookmark-added {
-  align-items: middle;
+
+.tabs-item:not(:last-child) {
+  margin-right: 40px;
 }
 
 .tabs-item-active {
@@ -257,6 +264,8 @@ body {
 .text {
   font-size: 16px;
   line-height: 140%;
+  margin-top: 0;
+  
 }
 
 .text-title {
@@ -264,4 +273,34 @@ body {
   font-size: 16px;
   line-height: 140%;
   margin: 32px 0px 22px;
+}
+.subscribe-title {
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 150%;
+  margin: 0px 0px 14px;
+}
+
+.subscribe-form {
+  display: flex;
+  margin-bottom: 48px;
+}
+
+.subscribe-input {
+    background: rgba(196, 196, 196, 0.5);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: none;
+    padding: 12px 18px;
+    color: #AEAEAE;
+    flex: 1;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.subscribe-button {
+  background: #FF8F27;
+  border-radius: 0px 5px 5px 0px;
+  border: none;
+  padding: 12px;
 }
