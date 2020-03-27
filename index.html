@@ -11,7 +11,9 @@
   <link
     href="https://fonts.googleapis.com/css?family=Roboto:400,900&display=swap&subset=cyrillic"
     rel="stylesheet">
-
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -34,20 +36,21 @@
     </header>
 
     <main class="main">
-      <h1 class="title"> Бэтмен </h1>
-      <small class="title-en"> The Batman </small>
-      <div class="info">
+      <h1 class="title animated bounceInRight"> Бэтмен </h1>
+      <small class="title-en animated bounceInRight delay-1s"> The Batman </small>
+      <div class="info animated fadeInUp delay-2s">
         <div class="movie-info">
           <span class="tag"> Фильм </span>
           <span class="country"> США, 2021 год </span>
-          <a href="#" class="play"> Смотреть трейлер </a>
+          <a data-fancybox href="https://www.youtube.com/watch?v=Xo8i2ZDMlQg"
+            class="play"> Смотреть трейлер </a>
         </div>
         <a href="#" class="more"> Подробнее </a>
       </div>
 
       <div class="content">
         <div class="short-info">
-          <img src="./img/poster.jpg" alt="poster" class="poster">
+          <img src="img/poster.jpg" alt="poster" class="poster">
           <button class="button"> Буду смотреть </button>
           <h3 class="actors-title"> В главных ролях </h3>
           <ul class="actors-list">
@@ -65,17 +68,17 @@
         </div>
         <div class="full-info">
           <nav class="tabs">
-            <a href="#" class="tabs-item tabs-item-active"> Описание </a>
-            <a href="#" class="tabs-item"> Рецензии </a>
-            <a href="#" class="tabs-item"> Премьеры </a>
-            <a href="#" class="tabs-item"> Актеры </a>
-            <a href="#" class="tabs-item"> Награды </a>
-            <a href="#" class="tabs-item"> Факты </a>
-            <a href="#" class="tabs-item"> Сайты </a>
-            <img src="./img/bookmark-icon.svg" alt="" class="bookmark-added">
+            <a href="#about" class="tabs-item tabs-item-active"> Описание </a>
+            <a href="#reviews" class="tabs-item"> Рецензии </a>
+            <a href="#premieres" class="tabs-item"> Премьеры </a>
+            <a href="#actors" class="tabs-item"> Актеры </a>
+            <a href="#awards" class="tabs-item"> Награды </a>
+            <a href="#facts" class="tabs-item"> Факты </a>
+            <a href="#sites" class="tabs-item"> Сайты </a>
+            <img src="img/bookmark-icon.svg" alt="bookmark" class="bookmark-added">
           </nav>
           <div class="full-content">
-            <div class="tabs-content">
+            <div class="tabs-content visible" id="about">
               <p class="text">
                 Предстоящий американский супергеройский фильм, основанный на
                 одноимённых комиксах издательства DC Comics. Картина будет
@@ -115,16 +118,36 @@
               </p>
 
             </div>
+            <div class="tabs-content" id="reviews">
+              <p class="text"> Тут скоро появятся рецензии </p>
+            </div>
+            <div class="tabs-content" id="premieres">
+              <p class="text"> Тут скоро появятся премьеры </p>
+            </div>
+            <div class="tabs-content" id="actors">
+              <p class="text"> Тут скоро появятся актеры </p>
+            </div>
+            <div class="tabs-content" id="awards">
+              <p class="text"> Тут скоро появятся награды </p>
+            </div>
+            <div class="tabs-content" id="facts">
+              <p class="text"> Тут скоро появятся факты </p>
+            </div>
+            <div class="tabs-content" id="sites">
+              <p class="text"> Тут скоро появятся сайты </p>
+            </div>
+
             <div class="subscribe">
               <h3 class="subscribe-title"> Подпишитесь на обновления </h3>
-              <form action="" class="subscribe-form">
-                <input type="text" class="subscribe-input" placeholder="Ваш Email">
+              <form action="#" class="subscribe-form">
+                <input type="text" class="subscribe-input"
+                  placeholder="Ваш Email">
                 <button class="subscribe-button">
                   <img src="img/check.svg" alt="check">
                 </button>
               </form>
               <a href="#">
-                <img class="banner" src="./img/banner.jpg" alt="banner">
+                <img class="banner" src="img/banner.jpg" alt="banner">
               </a>
             </div>
           </div>
@@ -134,6 +157,13 @@
     </main>
   </div>
   <!-- /.container -->
+  <!-- Подключена библиотеку jQuery-->
+  <script
+    src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+  <!-- Подключен Fancybox -->
+  <script src="js/jquery.fancybox.min.js"></script>
+  <!-- Подключены свои скрипты -->
+  <script src="js/main.js"></script>
 </body>
 
 </html>

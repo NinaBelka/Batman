@@ -22,7 +22,10 @@ body {
 
 .header {
   display: flex;
+  display: -webkit-box;
+  -webkit-box-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
   justify-content: space-between;
   padding-top: 45px;
   margin-bottom: 30%;
@@ -36,8 +39,11 @@ body {
 }
 
 .search {
+  display: -webkit-box;
   display: flex;
+  -webkit-box-align: center;
   align-items: center;
+  -webkit-box-flex: 0.8;
   flex: 0.8;
 }
 
@@ -47,6 +53,7 @@ body {
   border: none;
   padding: 12px 18px;
   color: #AEAEAE;
+  -webkit-box-flex: 1;
   flex: 1;
   font-size: 14px;
   line-height: 16px;
@@ -82,7 +89,9 @@ body {
 }
 
 .user {
+  display: -webkit-box;
   display: flex;
+  -webkit-box-align: center;
   align-items: center;
 }
 
@@ -97,6 +106,7 @@ body {
   width: 40px;
   height: 40px;
   border-radius: 50%;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 
@@ -118,14 +128,19 @@ body {
 }
 
 .info {
+  display: -webkit-box;
   display: flex;
+  -webkit-box-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
   justify-content: space-between;
   margin-bottom: 100px;
 }
 
 .movie-info {
+  display: -webkit-box;
   display: flex;
+  -webkit-box-align: center;
   align-items: center;
 }
 
@@ -147,7 +162,9 @@ body {
 }
 
 .play {
+  display: -webkit-box;
   display: flex;
+  -webkit-box-align: center;
   align-items: center;
   font-size: 16px;
   line-height: 19px;
@@ -167,7 +184,9 @@ body {
 }
 
 .more {
+  display: -webkit-box;
   display: flex;
+  -webkit-box-align: center;
   align-items: center;
   font-size: 16px;
   line-height: 19px;
@@ -188,7 +207,9 @@ body {
 }
 
 .content {
+  display: -webkit-box;
   display: flex;
+  -webkit-box-pack: justify;
   justify-content: space-between;
   background: #FFFFFF;
   border-radius: 3px;
@@ -232,22 +253,33 @@ body {
 }
 
 .full-info {
+  -webkit-box-flex: 0.97;
   flex: 0.97;
 }
 
 .full-content {
+  display: -webkit-box;
   display: flex;
+  -webkit-box-pack: justify;
   justify-content: space-between;
 }
 
 .tabs-content {
+  display: none;
   margin-right: 70px;
 }
 
+.visible {
+  display: block;
+}
+
 .tabs {
+  display: -webkit-box;
   display: flex;
+  -webkit-box-align: center;
   align-items: center;
   margin-bottom: 4%;
+  -webkit-box-pack: justify;
   justify-content: space-between;
 }
 
@@ -270,7 +302,6 @@ body {
   font-size: 16px;
   line-height: 140%;
   margin-top: 0;
-
 }
 
 .text-title {
@@ -288,30 +319,43 @@ body {
 }
 
 .subscribe-form {
-  display: flex;
+  display: -webkit-box;
+  position: relative;
   margin-bottom: 48px;
 }
 
 .subscribe-input {
+  width: 100%;
   background: rgba(196, 196, 196, 0.5);
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
+  border-radius: 5px;
   border: none;
+  height: 40px;
   padding: 12px 18px;
   color: #AEAEAE;
-  flex: 1;
+  -webkit-box-flex: 1;
   font-size: 14px;
   line-height: 16px;
 }
 
 .subscribe-button {
+  position: absolute;
   background: #FF8F27;
   border-radius: 0px 5px 5px 0px;
   border: none;
-  padding: 12px;
+  height: 40px;
+  width: 40px;
+  right: 0;
+  top: 0;
+  text-align: center;
+  padding: 9px;
 }
 
 @media (max-width: 1200px) {
+
+  body {
+    background-size: auto;
+  }
+
   .container {
     max-width: 960px;
   }
@@ -322,6 +366,7 @@ body {
 }
 
 @media (max-width: 992px) {
+
   .container {
     max-width: 740px;
   }
@@ -353,6 +398,7 @@ body {
 }
 
 @media (max-width: 768px) {
+
   .container {
     max-width: 540px;
   }
@@ -363,8 +409,8 @@ body {
 
   .tabs {
     flex-wrap: wrap;
+    -webkit-box-pack: start;
     justify-content: start;
-
   }
 
   .tabs-content {
@@ -383,7 +429,8 @@ body {
   }
 }
 
-@media (max-width: 578px) {
+@media (max-width: 576px) {
+
   .container {
     width: 90%;
   }
@@ -394,6 +441,7 @@ body {
 
   .search {
     flex-basis: 100%;
+    -webkit-box-ordinal-group: 4;
     order: 3;
     margin-top: 5%;
   }
@@ -445,7 +493,6 @@ body {
     line-height: 21px;
     margin-bottom: 10px;
     margin-right: 0;
-
   }
 
   .bookmark-added {
@@ -465,8 +512,15 @@ body {
     text-align: center;
   }
 
+  .subscribe-form {
+    display: -webkit-box;
+    display: flex;
+    width: 100%;
+    margin-bottom: 40px;
+    margin-right: 0;
+  }
+
   .banner {
     width: 100%;
   }
-
 }
